@@ -1,25 +1,25 @@
 #include <stdio.h>
 
 /**
- * main - Prints all possible different combinations of three digits.
+ * main - Prints all possible different combinations of three digits
  *
  * Return:0 Always zero
  */
 int main(void)
 {
-	int n1 n2 n3;
+	int i, j, k;
 
-	for (n1 = 0; n1 < 8; n1++)
+	for (i = 0; i < 8; i++)
 	{
-		for (n2 = 0; n2 < 9; n2++)
+		for (j = i + 1; j < 9; j++)
 		{
-			for (n3 = 0; n3 < 10; n3++)
+			for (k = j + 1; k < 10; k++)
 			{
-				putchar((n1 % 10) + '0');
-				putchar((n2 % 10) + '0');
-				putchar((n3 % 10) + '0');
+				putchar((i % 10) + '0');
+				putchar((j % 10) + '0');
+				putchar((k % 10) + '0');
 
-				if (n1 == 7 && n2 == 8 && n3 == 9)
+				if (i == 7 && j == 8 && k == 9)
 					continue;
 
 				putchar(',');
@@ -29,6 +29,5 @@ int main(void)
 	}
 
 	putchar('\n');
-	return ('0');
+	return (0);
 }
-
