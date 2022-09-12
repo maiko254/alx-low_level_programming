@@ -1,4 +1,4 @@
-int printf(const char *format, ...);
+int _putchar(char c);
 
 /**
  * main - Prints _putchar, followed by a new line.
@@ -7,9 +7,16 @@ int printf(const char *format, ...);
  */
 int main(void)
 {
-	char c[9] = "_putchar";
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
 
-	printf("%s\n", c);
+	_putchar('\n');
 
 	return (0);
 }
