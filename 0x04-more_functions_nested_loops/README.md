@@ -13,3 +13,5 @@
 6-print_line.c - Function that draws a straight line in the terminal.
 
 7-print_diagonal.c - Function that draws a diagonal line on the terminal.
+
+8-print_square.c - Function that prints a square using #.
