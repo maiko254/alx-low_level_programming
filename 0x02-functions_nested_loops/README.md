@@ -23,3 +23,5 @@
 11-print_to_98.c - Function that prints all natural numbers from n to 98, followed by a new line.
 
 100-times_table.c - Function that prints the n times table, starting with 0. If n is greater than 15 or less than 0 the function should not print anything.
+
+100-prime_factor.c - Program that finds and prints the largest prime factor of the number 612852475143.
