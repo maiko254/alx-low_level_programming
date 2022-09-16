@@ -2,10 +2,10 @@
 
 /**
  * print_number - prints integer
- * @num: integer to print
+ * @n: integer to print
  */
 
-void print_number(int num)
+void print_number(int n)
 {
 	unsigned int num = n;
 
