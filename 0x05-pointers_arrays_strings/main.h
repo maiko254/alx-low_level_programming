@@ -13,6 +13,6 @@ int _strlen(char *s);
 void _puts(char *str);
 void print_rev(char *s);
 void rev_string(char *s);
-int str_len(char *ptr);
+void puts2(char *str);
 
 #endif /* MAIN_H */
