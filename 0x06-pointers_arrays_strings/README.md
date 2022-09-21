@@ -4,3 +4,5 @@
 	      n bytes from src.
 
 2-strncpy.c - Function that copies a string upto n characters
+
+3-strcmp.c - Function that compares two strings.
