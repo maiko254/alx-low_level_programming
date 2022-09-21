@@ -1,1 +1,1 @@
-0x06-pointers_arrays_strings - Function that concatenates two strings.
+0-strcat.c - Function that concatenates two strings.
