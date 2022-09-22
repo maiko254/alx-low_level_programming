@@ -2,7 +2,7 @@
 
 /**
  * cap_string - capitalizes all words in a string
- * @s - string to capitalize
+ * @s: string to capitalize
  * Return: pointer to capitalized string
  */
 
@@ -31,7 +31,7 @@ char *cap_string(char *s)
 			s[i] = s[i] - 32;
 
 		i++;
-	}	
+	}
 
 	return (s);
 }
