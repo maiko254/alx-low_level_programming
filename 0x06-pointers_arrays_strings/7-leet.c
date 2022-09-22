@@ -8,15 +8,20 @@
 
 char *leet(char *s)
 {
-	int i = 0, j;
-	char enc[8] = {'0', 'L', '?', 'E', 'A', '?', '?', 'T'};
+	int i = 0, j = 0, l = 5;
+	char a[5] = {'A', 'E', 'O', 'T', 'L'};
+	char b[5] = {'4', '3', '0', '7', '1'};
 
 	while (s[i])
 	{
-		for (j = 0; j <= 7; j++)
+		j = 0;
+
+		while (j < l)
 		{
-			if (s[i] == enc[j] || s[i] - 32 == enc[j])
-				s[i] = j + '0';
+			if (s[i] == a[j] || s[i] - 32 == a[j])
+				s[i] = b[j];
+
+			j++;
 		}
 
 		i++;
