@@ -18,3 +18,5 @@
 100-rot13.c - Function that encodes a string using rot13.
 
 101-print_number.c - Function that prints an integer.
+
+102-magic.c - Program to change value of a[2] from 1024 to 98.
