@@ -1,10 +1,5 @@
 #include <stdio.h>
 
-/**
- * main - changes value of a[2] to 98
- * Return:0 - Always zero
- */
-
 int main(void)
 {
 	int n;
