@@ -9,3 +9,5 @@
 4-strpbrk.c - Function that searches a string for any of a set of bytes. Returns a pointer to the byte in s that matches one of the bytes in accept, or NULL if no such byte is found.
 
 5-strstr.c - Function that locates a substring. Returns a pointer to the beginning of the located substring, or NULL if the substring is not found.
+
+7-print_chessboard.c - Function that prints the chessboard.
