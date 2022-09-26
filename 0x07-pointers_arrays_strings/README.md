@@ -11,3 +11,5 @@
 5-strstr.c - Function that locates a substring. Returns a pointer to the beginning of the located substring, or NULL if the substring is not found.
 
 7-print_chessboard.c - Function that prints the chessboard.
+
+8-print_diagsums.c - Function that prints the sum of the two diagonals of a square matrix of integers.
