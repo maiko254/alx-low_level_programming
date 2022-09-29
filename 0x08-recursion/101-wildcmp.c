@@ -58,7 +58,7 @@ int _strlen(char *s)
 
 void iterate_wild(char **wildcard)
 {
-	if (**wildcard == '*')	
+	if (**wildcard == '*')
 	{
 		(*wildcard)++;
 		iterate_wild(wildcard);
@@ -71,6 +71,8 @@ void iterate_wild(char **wildcard)
  *
  * @str: string to match
  * @postfix: the postfix
+ *
+ * Return: matching character
  */
 
 char *postfix_match(char *str, char *postfix)
