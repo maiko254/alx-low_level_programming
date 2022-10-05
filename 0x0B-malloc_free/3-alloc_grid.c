@@ -6,7 +6,7 @@
  * @width: width of 2 dimensional array
  * @height: height of 2 dimensional array
  *
- * Return: pointer to 2 dimensional array, NULL if width or height is < 0
+ * Return: pointer to 2 dimensional array, NULL if width or height is <= 0
  */
 
 int **alloc_grid(int width, int height)
