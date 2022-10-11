@@ -2,8 +2,10 @@
 #define OBJECT_LIKE_MACRO_H
 
 /**
- * Desc: header file that defines a macro named SIZE as
- *     abbreviation for th token 1024
+ * FIle: 0-object_like_macro.h
+ * Author: Michael Bonyo
+ * Desc: header file that defines a macro named SIZE
+ *      as abbreviation for the token 1024.
  */
 
 #define SIZE 1024
