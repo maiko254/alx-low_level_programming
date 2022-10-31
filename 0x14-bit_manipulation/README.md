@@ -18,3 +18,5 @@ Task 3: 11 - Write a function that sets the value of a bit to `1` at a given ind
 * Prototype: `int set_bit(unsigned long int *n, unsigned int index);`
 
 Task 4: 100  - Write a function that sets the value of a bit to `0` at a given index.
+
+Task 5: 101 - Write a function that returns the number of bits you would need to flip to get from one number to another.
