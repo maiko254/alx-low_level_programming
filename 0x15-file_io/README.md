@@ -7,3 +7,5 @@ Task 1: 1-create_file - Create a function that creates a file.
 
 Task 2: 2-append_text_to_file - Write a function that appends text at the end of a file.  
 * Prototype: `int append_text_to_file(const char *filename, char *text_content);`
+
+Task 3: 3-cp - Write a program that copies the content of a file to another file.
