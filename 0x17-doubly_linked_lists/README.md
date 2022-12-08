@@ -22,3 +22,9 @@
 ###Task 4
 * 4-free_dlistint.c - Write a function that frees a `dlistint_t` list.
    * Prototype:`void free_dlistint(dlistint_t *head);`
+
+### Task 4
+* 5-get_dnodeint.c - Write a function that returns the nth node of a `dlistint_t` linked list.
+   * Prototype: `dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);`
+   * where `index` is the index of the node, starting from `0`
+   * if the node does not exist, return `NULL`
