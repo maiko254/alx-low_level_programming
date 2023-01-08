@@ -6,3 +6,7 @@
       * where `size` is the size of the array
    * Returns a pointer to the newly created hash table
    * If something went wrong, your function should return `NULL`
+
+### Task 1. djb2 
+* 1-djb2.c - Write a hash function implementing the djb2 algorithm.
+   * Prototype `unsigned long int hash_djb2(const unsigned char *str);`
