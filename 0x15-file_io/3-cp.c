@@ -1,6 +1,10 @@
-#include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <sys/types.h>
+#include <fcntl.h>
+#include <unistd.h>
+
+int closefd(int fd);
 
 /**
  * main - copies the content of a file to another file
@@ -10,7 +14,7 @@
  */
 int main(int argc, char **argv)
 {
-	int op1, op2, rd, wr, cl1, cl2;
+	int op1, op2, rd, wr;
 
 	char *buf;
 
@@ -39,7 +43,7 @@ int main(int argc, char **argv)
 	wr = write(op2, buf, rd);
 
 	if (rd == -1)
-	{	
+	{
 		dprintf(2, "Error: Can't read from file %s", argv[1]);
 		exit(98);
 	}
@@ -51,20 +55,28 @@ int main(int argc, char **argv)
 
 	free(buf);
 
-	cl1 = close(op1);
-	cl2 = close(op2);
-
-	if (cl1 == -1)
-	{
-		dprintf(2, "Error: Can't close fd %d", cl1);
-		exit(100);
-	}
-
-	if (cl2 == -1)
-	{
-		dprintf(2, "Error: Can't close fd %d", cl2);
-		exit(100);
-	}
+	closefd(op1);
+	closefd(op2);
 
 	return (0);
+}
+
+/**
+ * closefd - closes a file descriptor
+ * @fd: file descriptor
+ * Return: 0 on success
+ */
+int closefd(int fd)
+{
+	int cl;
+
+	cl = close(fd);
+
+	if (cl == -1)
+	{
+		dprintf(2, "Error: Can't close fd %d", cl);
+		exit(100);
+	}
+
+	return (cl);
 }
