@@ -32,22 +32,30 @@ int main(int argc, char **argv)
 	}
 
 	op1 = open(argv[1], O_RDONLY);
-	op2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	op2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR
+			| S_IRGRP | S_IWGRP | S_IROTH);
 
 	rd = read(op1, buf, 1024);
-	wr = write(op2, buf, rd);
 
-	if (op1 == -1 || rd == -1)
-	{
-		dprintf(2, "Error: Can't read from file %s", argv[1]);
-		exit(98);
-	}
+	do {
 
-	if (op2 == -1 || wr == -1)
-	{
-		dprintf(2, "Error: Can't write to %s", argv[2]);
-		exit(99);
-	}
+		if (op1 == -1 || rd == -1)
+		{
+			dprintf(2, "Error: Can't read from file %s", argv[1]);
+			exit(98);
+		}
+
+		wr = write(op2, buf, rd);
+
+		if (op2 == -1 || wr == -1)
+		{
+			dprintf(2, "Error: Can't write to %s", argv[2]);
+			exit(99);
+		}
+
+		rd = read(op1, buf, 1024);
+		op2 = open(argv[2], O_WRONLY | O_APPEND);
+	} while (rd > 0);
 
 	free(buf);
 
