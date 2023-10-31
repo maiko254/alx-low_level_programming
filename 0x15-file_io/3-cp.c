@@ -24,32 +24,28 @@ int main(int argc, char **argv)
 		exit(97);
 	}
 
-	op1 = open(argv[1], O_RDONLY);
-	op2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-
-	if (op1 == -1)
-	{
-		dprintf(2, "Error: Can't read from file %s", argv[1]);
-		exit(98);
-	}
-
 	buf = malloc(sizeof(char) * 1024);
 	if (buf == NULL)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
+
+	op1 = open(argv[1], O_RDONLY);
+	op2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+
 	rd = read(op1, buf, 1024);
 	wr = write(op2, buf, rd);
 
-	if (rd == -1)
+	if (op1 == -1 || rd == -1)
 	{
 		dprintf(2, "Error: Can't read from file %s", argv[1]);
 		exit(98);
 	}
+
 	if (op2 == -1 || wr == -1)
 	{
-		dprintf(2, "Error: Can't write to %s", argv[3]);
+		dprintf(2, "Error: Can't write to %s", argv[2]);
 		exit(99);
 	}
 
